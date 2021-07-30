@@ -59,11 +59,14 @@ body{
 .info__containers:hover{
    transform: scale(1.1);
 }
+
 #active__cases{
    border-color: blue;
    background-color: blue;
    color: white;
+
 }
+
 #confirmed__cases{
    border-color: red;
    background-color: red;
