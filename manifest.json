@@ -8,5 +8,5 @@
         "default_icon":"icon.png",
         "default_popup" : "index.html"
     },
-    "permissions" : ["activeTab","https://api.covid19india.org/data.json"]
+    "permissions" : ["https://api.covid19india.org/data.json"]
 }
