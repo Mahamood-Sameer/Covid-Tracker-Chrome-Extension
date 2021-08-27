@@ -1,112 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Covid Tracker</title>
-    <link rel="stylesheet" href="./index.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="utf-8">
+    <title>#Covid19</title>
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-
-
+    <link rel="stylesheet" href="./index.css">
 </head>
 
 <body>
-    <div class="container">
-        <div class="header">
-            <span class="material-icons">coronavirus</span>
-            <h2>Covid-19 , India</h2>
-        </div>
-        <div class="info_1">
-            <div class="content">
-                <div id="active__cases" class="info__containers"></div>
-                <p>Active</p>
-            </div>
-            <div class="content">
-                <div id="confirmed__cases" class="info__containers"></div>
-                <p>Confirmed</p>
-            </div>
-        </div>
-        <div class="info_2">
-            <div class="content">
-                <div id="recoverd__cases" class="info__containers"></div>
-                <p>Recoverd</p>
-            </div>
-            <div class="content">
-                <div id="deaths__cases" class="info__containers"></div>
-                <p>Deaths</p>
-            </div>
-        </div>
+    <!-- Header -->
 
-        <div class="selection">
-            <select id="state">
-                <option>--:: Select a State ::--</option>
-                <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
-                <option value="Andhra Pradesh">Andhra Pradesh</option>
-                <option value="Arunachal Pradesh">Arunachal Pradesh</option>
-                <option value="Assam">Assam</option>
-                <option value="Bihar">Bihar</option>
-                <option value="Chandigarh">Chandigarh</option>
-                <option value="Chhattisgarh">Chhattisgarh</option>
-                <option value="Dadra and Nagar Haveli and Daman and Diu">Dadra and Nagar Haveli and Daman and Diu
-                </option>
-                <option value="Delhi">Delhi</option>
-                <option value="Goa">Goa</option>
-                <option value="Gujarat">Gujarat</option>
-                <option value="Haryana">Haryana</option>
-                <option value="Himachal Pradesh">Himachal Pradesh</option>
-                <option value="Jammu and Kashmir">Jammu and Kashmir</option>
-                <option value="Jharkhand">Jharkhand</option>
-                <option value="Karnataka">Karnataka</option>
-                <option value="Kerala">Kerala</option>
-                <option value="Ladakh">Ladakh</option>
-                <option value="Lakshadweep">Lakshadweep</option>
-                <option value="Madhya Pradesh">Madhya Pradesh</option>
-                <option value="Maharashtra">Maharashtra</option>
-                <option value="Manipur">Manipur</option>
-                <option value="Meghalaya">Meghalaya</option>
-                <option value="Mizoram">Mizoram</option>
-                <option value="Nagaland">Nagaland</option>
-                <option value="Odisha">Odisha</option>
-                <option value="Puducherry">Puducherry</option>
-                <option value="Punjab">Punjab</option>
-                <option value="Rajasthan">Rajasthan</option>
-                <option value="Sikkim">Sikkim</option>
-                <option value="Tamil Nadu">Tamil Nadu</option>
-                <option value="Telangana">Telangana</option>
-                <option value="Tripura">Tripura</option>
-                <option value="Uttar Pradesh">Uttar Pradesh</option>
-                <option value="Uttarakhand">Uttarakhand</option>
-                <option value="West Bengal">West Bengal</option>
-            </select>
-            <a id="getdata_button">Get Data</a>
-            <div class="table_info">
-                <table class="searched_info" border="1px">
+    <div class="header">
+        <img src="./icon128.png" alt="Logo" id="logo">
+        <h2>Covid-19,Worldwide</h2>
+    </div>
+    <br>
+    <div class="cards_container"></div>
+
+    <!-- Tablele -->
+
+    <div class="content">
+        <div class="Table">
+            <center>
+                <table>
                     <tr>
-                        <th colspan="2" id="searched_state"></th>
-                    </tr>
-                    <tr>
-                        <th id="searched_active" class="table_cells">Active</th>
-                        <td id="active__cases_searched" class="table_cells"></td>
-                    </tr>
-                    <tr>
-                        <th id="searched_confirmed" class="table_cells">Confirmed</th>
-                        <td id="confirmed__cases_searched" class="table_cells"></td>
-                    </tr>
-                    <tr>
-                        <th id="searched_recoverd" class="table_cells">Recoverd</th>
-                        <td id="recoverd__cases_searched" class="table_cells"></td>
-                    </tr>
-                    <tr>
-                        <th id="searched_deaths" class="table_cells">Deaths</th>
-                        <td id="deaths__cases_searched" class="table_cells"></td>
+                        <th>Country</th>
+                        <th>Cases</th>
+                        <th>Active</th>
+                        <th>Deaths</th>
+                        <th>Recovered</th>
                     </tr>
                 </table>
-            </div>
+            </center>
+        </div>
+        
+        <div class="MapandSearch">
+            <form id="Search">
+                <select id="SearchCountry">
+                    <option value="Select the Country">Select the Country</option>
+                </select>
+                <button type="submit" id="Submit">Search</button>
+            </form>
+            <div id="map"></div>
         </div>
     </div>
+
+
 </body>
 <script src="./index.js"></script>
 
