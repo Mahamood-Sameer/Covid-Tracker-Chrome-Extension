@@ -108,6 +108,12 @@ tr th , tr td{
    background-color: black;
 }
 
+i{
+   margin-left: 20px;
+   color: grey;
+   font-weight: bold;
+}
+
 #map {
    margin: 50px auto;
    width: 90vw;

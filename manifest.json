@@ -3,17 +3,17 @@
     "name": "Covid Tracker",
     "version": "1.1.0",
     "description": "Tracking the Number of Active cases,Recoveries,Deaths,Confirmed cases ",
-    "icons": {"128":"icon128.png",
-               "48":"icon48.png",
-               "16":"icon16.png"
-            },
-    "browser_action" : {
-        "default_icon":"icon16.png",
-        "default_popup" : "index.html"
+    "icons": {
+        "128": "icon128.png",
+        "48" : "icon48.png",
+        "16" : "icon16.png"
+    },
+    "browser_action": {
+        "default_icon": "icon128.png",
+        "default_popup": "index.html"
     },
     "content_security_policy": "script-src 'self' 'unsafe-eval' https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.js ; object-src 'self'",
     "permissions": [
-        "http://*/",
-        "https://*/"
+        "activeTab"
     ]
 }
