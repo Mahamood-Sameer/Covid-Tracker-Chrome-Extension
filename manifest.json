@@ -12,8 +12,5 @@
         "default_icon": "icon128.png",
         "default_popup": "index.html"
     },
-    "content_security_policy": "script-src 'self' 'unsafe-eval' https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.js ; object-src 'self'",
-    "permissions": [
-        "activeTab"
-    ]
+    "content_security_policy": "script-src 'self' 'unsafe-eval' https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.js ; object-src 'self'"
 }
